@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/brunocdeveloper.github.io/app-toot-name/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/brunocdeveloper.github.io/app-toot-name/static/js/main.da1c2998.chunk.js",
-    "main.js.map": "/brunocdeveloper.github.io/app-toot-name/static/js/main.da1c2998.chunk.js.map",
-    "runtime-main.js": "/brunocdeveloper.github.io/app-toot-name/static/js/runtime-main.4e5b40d7.js",
-    "runtime-main.js.map": "/brunocdeveloper.github.io/app-toot-name/static/js/runtime-main.4e5b40d7.js.map",
-    "static/js/2.aa12910e.chunk.js": "/brunocdeveloper.github.io/app-toot-name/static/js/2.aa12910e.chunk.js",
-    "static/js/2.aa12910e.chunk.js.map": "/brunocdeveloper.github.io/app-toot-name/static/js/2.aa12910e.chunk.js.map",
-    "static/js/3.49c5ecd5.chunk.js": "/brunocdeveloper.github.io/app-toot-name/static/js/3.49c5ecd5.chunk.js",
-    "static/js/3.49c5ecd5.chunk.js.map": "/brunocdeveloper.github.io/app-toot-name/static/js/3.49c5ecd5.chunk.js.map",
-    "index.html": "/brunocdeveloper.github.io/app-toot-name/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/brunocdeveloper.github.io/app-toot-name/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.aa12910e.chunk.js.LICENSE.txt": "/brunocdeveloper.github.io/app-toot-name/static/js/2.aa12910e.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/brunocdeveloper.github.io/app-toot-name/static/media/logo.6ce24c58.svg"
+    "main.css": "/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/static/js/main.da1c2998.chunk.js",
+    "main.js.map": "/static/js/main.da1c2998.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c58ad69f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c58ad69f.js.map",
+    "static/js/2.aa12910e.chunk.js": "/static/js/2.aa12910e.chunk.js",
+    "static/js/2.aa12910e.chunk.js.map": "/static/js/2.aa12910e.chunk.js.map",
+    "static/js/3.49c5ecd5.chunk.js": "/static/js/3.49c5ecd5.chunk.js",
+    "static/js/3.49c5ecd5.chunk.js.map": "/static/js/3.49c5ecd5.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.aa12910e.chunk.js.LICENSE.txt": "/static/js/2.aa12910e.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.4e5b40d7.js",
+    "static/js/runtime-main.c58ad69f.js",
     "static/js/2.aa12910e.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
     "static/js/main.da1c2998.chunk.js"
