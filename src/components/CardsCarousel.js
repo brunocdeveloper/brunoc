@@ -11,7 +11,7 @@ const Container = styled.div`
     height: 404px;
   }  
 
-  button {
+  .transition-btn {
     height: 50px;
     align-self: center;
     background: #282A35;
@@ -21,14 +21,44 @@ const Container = styled.div`
     text-decoration: none;
     border-radius: 12px;
   }
+
+  .transition-btn:hover {
+    border: 2px solid white;
+  }
+
+  .shadowLeft {
+    box-shadow: -11px -2px 1em black;
+  }
+
+  .upEffect:hover {
+    border: 1px solid #E5E5E5;
+  }
 `
 const Cards = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+
   width: 328px;
   height: 404px;
   margin: 25px;
 
   :nth-of-type(2) {
     margin-top: -50px;
+  }
+
+  .name-btn {
+    position: absolute;
+    align-self: flex-end;
+    height: 50px;
+    font-size: 30px;
+    color: white;
+    background: #147083;
+    border: 3px solid;
+    width: 100%;
+  }
+  .name-btn:hover {
+    background-color: #282A35;
   }
 `
 const TitleCarousel = styled.h1`
@@ -55,6 +85,7 @@ function CardsCarousel() {
     setNextCard(data[indexNext]);
     setLastCard(data[indexNext -1]);
     if (indexNext === lastPosition) setNextCard(data[0]);
+
   }
 
   function lastProject() {
@@ -77,27 +108,29 @@ function CardsCarousel() {
   return (
     <Container>
       <TitleCarousel>Conheça alguns projetos no carrossel abaixo</TitleCarousel>
-      <button type="button" onClick={ nextProject }>Anterior</button>
-      <Cards>
+      <button className="transition-btn" type="button" onClick={ nextProject }>Anterior</button>
+      <Cards className='shadowLeft upEffect'>
         <img 
           src={ actualCard.image }
           alt={ actualCard.image }
           onClick={ nextProject }/>
-        <p>{actualCard.nome}</p>
+        <button className="name-btn">{ actualCard.nome }</button>
+
       </Cards>
-      <Cards>
+      <Cards className='shadowLeft upEffect'>
         <img src={ nextCard.image } alt={ nextCard.image } />
-        <p>{ nextCard.nome }</p>
+        <button className="name-btn">{ nextCard.nome }</button>
       </Cards>
-      <Cards>
+      <Cards className='shadowLeft upEffect'>
         <img
           src={ lastCard.image }
           alt={ lastCard.image }
           onClick={ lastProject }
         />
-        <p>{ lastCard.nome }</p>
+        <button className="name-btn">{ `${lastCard.nome}` }</button>
+
       </Cards>
-      <button type="button" onClick={ lastProject }>Próximo</button>
+      <button className="transition-btn" type="button" onClick={ lastProject }>Próximo</button>
     </Container>
   )
 }
