@@ -24,29 +24,23 @@ const Cards = styled.div`
 
 function CardsCarousel() {
   const [lastPosition, setPosition] = useState(data.length)
-  const [actualCard, setActualCard] = useState(data[lastPosition - 1])
-  const [lastCard, setLastCard] = useState(data[lastPosition - 2])
-  const [nextCard, setNextCard] = useState(data[lastPosition - 3])
+  const [actualCard, setActualCard] = useState(data[0])
+  const [nextCard, setNextCard] = useState(data[lastPosition - 1])
+  const [lastCard, setLastCard] = useState(data[2])
 
   function nextProject() {
-    const cardList = data.map((item) => item.image)
+    const cardList = data.map((item) => item.image);
 
+    const indexActual = cardList.indexOf(actualCard.image) + 1;
+    setActualCard(data[indexActual]);
+    if (indexActual === lastPosition) setActualCard(data[0]);
 
-    const indexActual = cardList.indexOf(actualCard.image) - 1
-    setActualCard(data[indexActual])
-    console.log(indexActual)
-    if (indexActual === -1) setActualCard(data[lastPosition -1])
+    const indexNext = cardList.indexOf(nextCard.image) + 1;
+    setNextCard(data[indexNext]);
+    setLastCard(data[indexNext -1])
+    console.log(indexNext)
+    if (indexNext === lastPosition) setNextCard(data[0]);
 
-
-    /* const indexNext = cardList.indexOf(nextCard.image) + 1 
-    setNextCard(data[indexNext])
-    if (indexNext === data.length) setNextCard(data[0]) */
-    
-    /* const indexLast = cardList.indexOf(nextCard.image)
-    setNextCard(data[indexLast -1 ]) */
-    
-    /* console.log(indexLast)
-    setLastCard(data[indexActual + 1 ]) */
   }
 
   return (
@@ -61,8 +55,8 @@ function CardsCarousel() {
         <p>{ nextCard.nome }</p>
       </Cards>
       <Cards>
-        <img src={ lastCard.image } alt={ lastCard.name }/>
-        <p>{lastCard.nome}</p>
+        <img src={ lastCard.image } alt={ lastCard.image } />
+        <p>{ lastCard.nome }</p>
       </Cards>
     </Container>
   )
